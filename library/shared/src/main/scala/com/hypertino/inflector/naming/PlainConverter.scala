@@ -1,5 +1,5 @@
 package com.hypertino.inflector.naming
 
-class PlainConverter extends Converter {
+object PlainConverter extends Converter {
   def convert(identifier: String): String = identifier
 }

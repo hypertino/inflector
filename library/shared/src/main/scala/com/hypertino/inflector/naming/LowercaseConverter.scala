@@ -1,5 +1,5 @@
 package com.hypertino.inflector.naming
 
-class LowercaseConverter extends Converter {
+object LowercaseConverter extends Converter {
   def convert(identifier: String): String = identifier.toLowerCase
 }
