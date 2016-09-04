@@ -52,9 +52,9 @@ publishTo := {
     Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
 
-pgpSecretRing := file("ht-oss-private.asc")
+pgpSecretRing := file("./travis/ht-oss-private.asc")
 
-pgpPublicRing := file("ht-oss-public.asc")
+pgpPublicRing := file("./travis/ht-oss-public.asc")
 
 usePgpKeyHex("F8CDEF49B0EDEDCC")
 
