@@ -21,7 +21,7 @@ The artifacts for _Inflector_ live on Maven Central and can be tied into your SB
 libraryDependencies += "com.hypertino" %% "inflector" % "1.0.0"
 ```
 
-The latest released version is 1.0.0. It is available for Scala 2.10, Scala 2.11, Scala 2.12.0-M5 
+The latest released version is 1.0.0. It is available for Scala 2.10, Scala 2.11 
 
 ## Pluralization
 

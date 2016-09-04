@@ -14,5 +14,5 @@ project/plugins/project/
 .idea/
 .idea_modules/
 
-ht-oss-private.asc.asc
-ht-oss-public.asc.asc
+ht-oss-private.asc
+ht-oss-public.asc

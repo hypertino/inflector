@@ -2,7 +2,7 @@ import sbt.Keys._
 
 version := "1.0-SNAPSHOT"
 
-crossScalaVersions := Seq("2.11.8", "2.10.6", "2.12.0-M5")
+crossScalaVersions := Seq("2.11.8", "2.10.6")
 
 name := "inflector"
 
