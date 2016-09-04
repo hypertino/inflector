@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/hypertino/inflector.svg)](https://travis-ci.org/hypertino/inflector)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.hypertino/inflector/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.hypertino/inflector)
+
 # About
 
 _Inflector_ is a Scala library which implements English pluralization and singularization along
