@@ -3,7 +3,7 @@
 
 # About
 
-_Inflector_ is a Scala library which implements English pluralization and singularization along
+_Inflector_ is a Scala/Scala.js library which implements English pluralization and singularization along
 with popular identifier's naming convention transformation.
 
 Pluralization is based on based on Damian Conway's paper
@@ -15,13 +15,16 @@ I've additionally implemented English singularization, it works for me, however 
 # Usage
 
 ## Installation
+
+**Publishing is in progress!**
+
 The artifacts for _Inflector_ live on Maven Central and can be tied into your SBT-based Scala project like this:
 
 ```sbt
-libraryDependencies += "com.hypertino" %% "inflector" % "1.0.0"
+libraryDependencies += "com.hypertino" %% "inflector" % "_._-SNAPSHOT"
 ```
 
-The latest released version is 1.0.0. It is available for Scala 2.10, Scala 2.11 
+The latest released version is _._._. It is available for Scala 2.10, Scala 2.11 JVM & JS 
 
 ## Pluralization
 

@@ -1,18 +1,22 @@
 import sbt.Keys._
 
-version := "1.0-SNAPSHOT"
-
 crossScalaVersions := Seq("2.11.8", "2.10.6")
 
-name := "inflector"
-
-organization := "com.hypertino"
-
-scalaVersion := "2.11.8"
-
-libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.0.0" % "test"
+val library = crossProject.settings(
+  name := "inflector",
+  organization := "com.hypertino",
+  version := "1.0-SNAPSHOT",
+  scalaVersion := "2.11.8",
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.0.0" % "test"
+).jsSettings(
+  // JS-specific settings here
+).jvmSettings(
+  // JVM-specific settings here
 )
+
+lazy val js = library.js
+
+lazy val jvm = library.jvm
 
 pomExtra := <url>https://github.com/hypertino/inflector</url>
   <licenses>
