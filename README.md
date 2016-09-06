@@ -21,10 +21,9 @@ I've additionally implemented English singularization, it works for me, however 
 The artifacts for _Inflector_ live on Maven Central and can be tied into your SBT-based Scala project like this:
 
 ```sbt
-libraryDependencies += "com.hypertino" %% "inflector" % "_._-SNAPSHOT"
+libraryDependencies += "com.hypertino" %% "inflector" % "1.0-SNAPSHOT"
 ```
-
-The latest released version is _._._. It is available for Scala 2.10, Scala 2.11 JVM & JS 
+It is available for Scala 2.10, Scala 2.11, Scala.js 0.6
 
 ## Pluralization
 
@@ -52,4 +51,4 @@ You may also convert back to camel-case and construct other converters.
 # License
 
 _Inflector_ library is available under the BSD 3-Clause License
- 
+
