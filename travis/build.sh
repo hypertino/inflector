@@ -8,7 +8,7 @@ if [[ "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master" ]]; then
   if grep "version\s*:=.*SNAPSHOT" build.sbt; then
     sbt +test +publishSigned
   else
-    sbt +test +publishSigned sonatypeReleaseAll
+    sbt +test +publishSigned sonatypeRelease
   fi
 else
   sbt +test
