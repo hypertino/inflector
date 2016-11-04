@@ -16,8 +16,6 @@ I've additionally implemented English singularization, it works for me, however 
 
 ## Installation
 
-**Publishing is in progress!**
-
 The artifacts for _Inflector_ live on Maven Central and can be tied into your SBT-based Scala project like this:
 
 ```sbt
