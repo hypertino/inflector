@@ -1,14 +1,15 @@
 import sbt.Keys._
 
-crossScalaVersions := Seq("2.11.8", "2.10.6")
+scalaVersion := "2.12.1"
+
+crossScalaVersions := Seq("2.12.1", "2.11.8", "2.10.6")
 
 organization in Global := "com.hypertino"
 
 lazy val library = crossProject.settings(publishSettings:_*).settings(
   name := "inflector",
   version := "1.0-SNAPSHOT",
-  scalaVersion := "2.11.8",
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.0.0" % "test",
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
   publishArtifact := true,
   publishArtifact in Test := false
 ).jsSettings(
@@ -21,7 +22,7 @@ lazy val js = library.js
 
 lazy val jvm = library.jvm
 
-val publishSettings = Seq(
+lazy val publishSettings = Seq(
   pomExtra := <url>https://github.com/hypertino/inflector</url>
     <licenses>
       <license>
