@@ -1,10 +1,14 @@
 language: scala
+sudo: false
 
 scala:
   - "2.12.1"
   - "2.11.8"
+  - "2.10.6"
 
-sudo: false
+node_js:
+  - "6"
+
 script: "$TRAVIS_BUILD_DIR/travis/build.sh"
 
 jdk:
