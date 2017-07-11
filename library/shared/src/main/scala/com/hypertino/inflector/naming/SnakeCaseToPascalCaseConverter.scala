@@ -1,6 +1,6 @@
 package com.hypertino.inflector.naming
 
 object SnakeCaseToPascalCaseConverter extends BaseConverter {
-  protected val parser = new SnakeCaseParser
+  protected val parser = SnakeCaseParser
   protected def createBuilder(): IdentifierBuilder = new PascalCaseBuilder()
 }

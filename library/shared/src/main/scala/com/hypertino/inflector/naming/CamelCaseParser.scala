@@ -1,6 +1,6 @@
 package com.hypertino.inflector.naming
 
-class CamelCaseParser extends IdentifierParser {
+object CamelCaseParser extends IdentifierParser {
   override def parse(identifier: String, builder: IdentifierBuilder): Unit = {
     var prevIsSmallCaps = false
     for (c <- identifier) {

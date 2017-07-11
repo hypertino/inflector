@@ -1,6 +1,6 @@
 package com.hypertino.inflector.naming
 
-class DashCaseParser extends IdentifierParser {
+object DashCaseParser extends IdentifierParser {
   override def parse(identifier: String, builder: IdentifierBuilder): Unit = {
     var prevIsDash = false
     var dashConsumed = false

@@ -1,6 +1,6 @@
 package com.hypertino.inflector.naming
 
-class SnakeCaseParser extends IdentifierParser {
+object SnakeCaseParser extends IdentifierParser {
   override def parse(identifier: String, builder: IdentifierBuilder): Unit = {
     var prevIsUnderscore = false
     var underscoreConsumed = false

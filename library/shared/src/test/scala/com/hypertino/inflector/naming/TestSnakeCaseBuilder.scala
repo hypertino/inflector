@@ -5,7 +5,7 @@ import org.scalatest.{FlatSpec, Matchers}
 class TestSnakeCaseBuilder extends FlatSpec with Matchers {
   "SnakeCaseBuilder " should " build string_like_this" in {
 
-    val parser = new PascalCaseParser()
+    val parser = CamelCaseParser
     val builder = new SnakeCaseBuilder()
 
     parser.parse("StringLikeThis", builder)

@@ -4,7 +4,7 @@ import org.scalatest.{FlatSpec, Matchers}
 
 class TestCamelCaseParser extends FlatSpec with Matchers {
   "CamelCaseParser " should " parse stringLikeThis " in {
-    val parser = new CamelCaseParser()
+    val parser = CamelCaseParser
     val builder = new SnakeCaseBuilder()
 
     parser.parse("stringLikeThis", builder)
@@ -12,7 +12,7 @@ class TestCamelCaseParser extends FlatSpec with Matchers {
   }
 
   "CamelCaseParser " should " parse string1Like2This3 " in {
-    val parser = new CamelCaseParser()
+    val parser = CamelCaseParser
     val builder = new SnakeCaseBuilder()
 
     parser.parse("string1Like2This3", builder)
