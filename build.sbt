@@ -8,7 +8,7 @@ organization in Global := "com.hypertino"
 
 lazy val library = crossProject.settings(publishSettings:_*).settings(
   name := "inflector",
-  version := "1.0.3",
+  version := "1.0.4",
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
   publishArtifact := true,
   publishArtifact in Test := false
