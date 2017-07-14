@@ -40,7 +40,8 @@ class TestEnglishInflector extends FlatSpec with Matchers {
     ("pancreas", "pancreases"),
     ("todo", "todos"),
     ("status", "statuses"),
-    ("slice", "slices")
+    ("slice", "slices"),
+    ("cookie", "cookies")
   )
 
   "EnglishInflector " should " pluralize exampleWordList" in {
