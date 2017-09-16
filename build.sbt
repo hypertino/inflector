@@ -1,14 +1,11 @@
-import sbt.Keys._
+scalaVersion := "2.12.3"
 
-scalaVersion := "2.12.1"
-
-crossScalaVersions := Seq("2.12.1", "2.11.8", "2.10.6")
-
-organization in Global := "com.hypertino"
+crossScalaVersions := Seq("2.12.3", "2.11.11", "2.10.6")
 
 lazy val library = crossProject.settings(publishSettings:_*).settings(
   name := "inflector",
-  version := "1.0.5",
+  version := "1.0.6",
+  organization := "com.hypertino",
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
   publishArtifact := true,
   publishArtifact in Test := false
