@@ -2,10 +2,11 @@ scalaVersion := "2.12.3"
 
 crossScalaVersions := Seq("2.12.3", "2.11.11", "2.10.6")
 
+organization in Global := "com.hypertino"
+
 lazy val library = crossProject.settings(publishSettings:_*).settings(
   name := "inflector",
   version := "1.0.6",
-  organization := "com.hypertino",
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
   publishArtifact := true,
   publishArtifact in Test := false
@@ -64,6 +65,10 @@ credentials ++= (for {
   password <- Option(System.getenv().get("sonatype_password"))
 } yield Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", username, password)).toSeq
 
-lazy val root = crossProject.settings(
-  publishArtifact := false
-).aggregate(library)
+publishArtifact in Test := false
+
+publishArtifact := false
+
+publish := ()
+
+publishLocal := ()
