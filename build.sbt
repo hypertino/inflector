@@ -1,6 +1,6 @@
-scalaVersion := "2.12.3"
+scalaVersion := "2.12.1"
 
-crossScalaVersions := Seq("2.12.3", "2.11.11", "2.10.6")
+crossScalaVersions := Seq("2.12.1", "2.11.8", "2.10.6")
 
 organization in Global := "com.hypertino"
 
