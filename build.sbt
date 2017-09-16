@@ -64,11 +64,6 @@ credentials ++= (for {
   password <- Option(System.getenv().get("sonatype_password"))
 } yield Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", username, password)).toSeq
 
-
-publishArtifact in Test := false
-
-publishArtifact := false
-
-publish := ()
-
-publishLocal := ()
+lazy val root = crossProject.settings(
+  publishArtifact := false
+).aggregate(library)
