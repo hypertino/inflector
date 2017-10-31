@@ -1,6 +1,6 @@
-scalaVersion := "2.12.1"
+crossScalaVersions := Seq("2.12.4", "2.11.11", "2.10.6")
 
-crossScalaVersions := Seq("2.12.1", "2.11.8", "2.10.6")
+scalaVersion := crossScalaVersions.value.head
 
 organization in Global := "com.hypertino"
 
@@ -65,10 +65,13 @@ credentials ++= (for {
   password <- Option(System.getenv().get("sonatype_password"))
 } yield Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", username, password)).toSeq
 
-publishArtifact in Test := false
-
-publishArtifact := false
-
-publish := ()
-
-publishLocal := ()
+lazy val `inflector-root` = project
+  .in(file("."))
+  .settings(publishSettings:_*)
+  .aggregate(js, jvm)
+  .settings(
+    publish := {},
+    publishLocal := {},
+    publishArtifact in Test := false,
+    publishArtifact := false
+  )
