@@ -1,6 +1,6 @@
-crossScalaVersions := Seq("2.12.4", "2.11.11", "2.10.6")
+crossScalaVersions in Global := Seq("2.12.4", "2.11.11", "2.10.6")
 
-scalaVersion := crossScalaVersions.value.head
+scalaVersion in Global := crossScalaVersions.value.head
 
 organization in Global := "com.hypertino"
 
