@@ -37,7 +37,8 @@ class EnglishInflector(val anglicizedEnglish: Boolean) extends TwoFormInflector 
       "tuna", "djinn", "mumps", "whiting", "eland", "news", "wildebeest", "elk", "pincers", "sugar", "each") ++
     irregular(("child", "children"), ("ephemeris", "ephemerides"), ("mongoose", "mongoose"),
       ("mythos", "mythoi"), ("soliloquy", "soliloquies"), ("trilby", "trilbys"), ("genus", "genera"),
-      ("quiz", "quizzes"), ("basis", "bases"), ("slice", "slices"), ("cookie", "cookies"), ("response", "responses"), ("case", "cases")) ++ {
+      ("quiz", "quizzes"), ("basis", "bases"), ("slice", "slices"), ("cookie", "cookies"), ("response", "responses"),
+      ("case", "cases"), ("license", "licenses"), ("licence", "licences")) ++ {
       if (anglicizedEnglish) {
         irregular(("beef", "beefs"), ("brother", "brothers"), ("cow", "cows"),
           ("genie", "genies"), ("money", "moneys"), ("octopus", "octopuses"), ("opus", "opuses"))
