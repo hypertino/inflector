@@ -89,7 +89,7 @@ class EnglishInflector(val anglicizedEnglish: Boolean) extends TwoFormInflector 
     rulep(("([^d]ea)f$", "$1f", "([^d]ea)ves$", "$1ves"),
       ("(ar)f$", "$1f$", "(ar)ves$", "$1ves"),
       ("([nlw]i)fe$", "$1fe", "([nlw]i)ves$", "$1ves"),
-      ("([aeiou])y$", "$y", "([aeiou])ys$", "$1ys"),
+      ("([aeiou])y$", "$1y", "([aeiou])ys$", "$1ys"),
       ("y$", "y", "ies$", "ies")) ++
     categoryRule(EnglishInflector.CATEGORY_O_I, "o", "os") ++
     categoryRule(EnglishInflector.CATEGORY_O_OS, "o", "os") ++

@@ -45,7 +45,8 @@ class TestEnglishInflector extends FlatSpec with Matchers {
     ("response", "responses"),
     ("case", "cases"),
     ("each", "each"),
-    ("license", "licenses")
+    ("license", "licenses"),
+    ("day", "days")
   )
 
   "EnglishInflector " should " pluralize exampleWordList" in {
