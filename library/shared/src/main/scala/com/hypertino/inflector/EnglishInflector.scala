@@ -94,7 +94,7 @@ class EnglishInflector(val anglicizedEnglish: Boolean) extends TwoFormInflector 
     categoryRule(EnglishInflector.CATEGORY_O_I, "o", "os") ++
     categoryRule(EnglishInflector.CATEGORY_O_OS, "o", "os") ++
     rule("([aeiou])o$", "$1o", "([aeiou])os$", "$1os") ++
-    rule("o$", "a", "oes$", "oes") ++
+    rule("o$", "o", "oes$", "oes") ++
     rule("ulum", "ulum", "ula", "ula") ++
     categoryRule(EnglishInflector.CATEGORY_A_ATA, "", "es") ++
     rule("s$", "s", "ses$", "ses") ++
