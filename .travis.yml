@@ -19,7 +19,7 @@ before_install:
   - git submodule update --init --recursive
 
 jdk:
-  - oraclejdk8
+  - oraclejdk13
 
 cache:
   directories:
