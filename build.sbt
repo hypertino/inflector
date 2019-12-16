@@ -1,15 +1,19 @@
-crossScalaVersions in Global := Seq("2.12.7", "2.11.12", "2.10.7")
+import sbtcrossproject.CrossPlugin.autoImport.{crossProject, CrossType}
+
+crossScalaVersions in Global := Seq("2.13.1", "2.12.10", "2.11.12", "2.10.7")
 
 scalaVersion in Global := crossScalaVersions.value.head
 
 organization in Global := "com.hypertino"
 
-lazy val library = crossProject.settings(publishSettings:_*).settings(
-  name := "inflector",
-  version := "1.0-SNAPSHOT",
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
-  publishArtifact := true,
-  publishArtifact in Test := false
+lazy val library = crossProject(JSPlatform, JVMPlatform)
+  .crossType(CrossType.Full) // [Pure, Full, Dummy], default: CrossType.Full
+  .settings(
+    name := "inflector",
+    version := "1.0-SNAPSHOT",
+    libraryDependencies += "org.scalatest" %%% "scalatest" % "3.1.0" % "test",
+    publishArtifact := true,
+    publishArtifact in Test := false
 ).jsSettings(
   // JS-specific settings here
 ).jvmSettings(
