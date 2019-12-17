@@ -78,5 +78,6 @@ lazy val `inflector-root` = project
     publish := {},
     publishLocal := {},
     publishArtifact in Test := false,
-    publishArtifact := false
+    publishArtifact := false,
+    skip in publish := true
   )
