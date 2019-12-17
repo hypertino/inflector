@@ -1,14 +1,19 @@
 import sbtcrossproject.CrossPlugin.autoImport.{crossProject, CrossType}
 
-crossScalaVersions in Global := Seq("2.13.1", "2.12.10", "2.11.12", "2.10.7")
+lazy val scala213 = "2.13.1"
+lazy val scala212 = "2.12.10"
+lazy val scala211 = "2.11.12"
+lazy val scala210 = "2.10.7"
+lazy val supportedScalaVersions = List(scala213, scala212, scala211, scala210)
 
-scalaVersion in Global := crossScalaVersions.value.head
+ThisBuild / scalaVersion := scala213
 
-organization in Global := "com.hypertino"
+ThisBuild / organization := "com.hypertino"
 
 lazy val library = crossProject(JSPlatform, JVMPlatform)
   .crossType(CrossType.Full) // [Pure, Full, Dummy], default: CrossType.Full
   .settings(
+    crossScalaVersions := supportedScalaVersions,
     name := "inflector",
     version := "1.0-SNAPSHOT",
     libraryDependencies += "org.scalatest" %%% "scalatest" % "3.1.0" % "test",
@@ -75,9 +80,6 @@ lazy val `inflector-root` = project
   .settings(publishSettings:_*)
   .aggregate(js, jvm)
   .settings(
-    publish := {},
-    publishLocal := {},
-    publishArtifact in Test := false,
-    publishArtifact := false,
-    skip in publish := true
+    crossScalaVersions := Nil,
+    publish / skip := true
   )
