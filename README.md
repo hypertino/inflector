@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/hypertino/inflector.svg)](https://travis-ci.org/hypertino/inflector)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.hypertino/inflector_2.12/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.hypertino/inflector_2.12)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.hypertino/inflector_2.13/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.hypertino/inflector_2.13)
 
 # About
 
@@ -19,9 +19,9 @@ I've additionally implemented English singularization, it works for me, however 
 The artifacts for _Inflector_ live on Maven Central and can be tied into your SBT-based Scala project like this:
 
 ```sbt
-libraryDependencies += "com.hypertino" %% "inflector" % "1.0.1"
+libraryDependencies += "com.hypertino" %% "inflector" % "1.0.13"
 ```
-It is available for Scala 2.11, Scala 2.12, Scala.js 0.6
+It is available for Scala 2.10 - 2.13, Scala.js 0.6
 
 ## Pluralization
 
