@@ -52,6 +52,7 @@ lazy val publishSettings = Seq(
   pgpSecretRing := file("./travis/script/ht-oss-private.asc"),
   pgpPublicRing := file("./travis/script/ht-oss-public.asc"),
   usePgpKeyHex("F8CDEF49B0EDEDCC"),
+  useGpg := false,
   pgpPassphrase := Option(System.getenv().get("oss_gpg_passphrase")).map(_.toCharArray),
   publishMavenStyle := true,
   pomIncludeRepository := { _ => false},
