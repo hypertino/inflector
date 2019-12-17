@@ -14,9 +14,12 @@ script: "$TRAVIS_BUILD_DIR/travis/script/build.sh"
 
 git:
   submodules: false
+
 before_install:
   - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
+  - sudo apt-get update
+  - sudo apt-get -y install gnupg2
 
 jdk:
   - oraclejdk13
