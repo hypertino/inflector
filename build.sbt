@@ -19,7 +19,8 @@ lazy val library = crossProject(JSPlatform, JVMPlatform)
     libraryDependencies += "org.scalatest" %%% "scalatest" % "3.1.0" % "test",
     publishArtifact := true,
     publishArtifact in Test := false
-).jsSettings(
+).settings(publishSettings:_*)
+.jsSettings(
   // JS-specific settings here
 ).jvmSettings(
   // JVM-specific settings here
