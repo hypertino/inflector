@@ -1,8 +1,9 @@
 package com.hypertino.inflector.naming
 
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class TestDashCaseBuilder extends FlatSpec with Matchers {
+class TestDashCaseBuilder extends AnyFlatSpec with Matchers {
   "DashCaseBuilder " should " build string-like-this" in {
 
     val parser = CamelCaseParser

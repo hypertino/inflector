@@ -1,8 +1,10 @@
 package com.hypertino.inflector.naming
 
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class TestConverters extends FlatSpec with Matchers {
+
+class TestConverters extends AnyFlatSpec with Matchers {
   "SnakeCaseToCamelCaseConverter " should " convert string_like_this " in {
     SnakeCaseToCamelCaseConverter.convert("string_like_this") shouldBe "stringLikeThis"
   }

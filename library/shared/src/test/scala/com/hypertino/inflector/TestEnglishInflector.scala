@@ -1,8 +1,9 @@
 package com.hypertino.inflector
 
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class TestEnglishInflector extends FlatSpec with Matchers {
+class TestEnglishInflector extends AnyFlatSpec with Matchers {
   val exampleWords = Map(
     ("alga", "algae"),
     ("nova", "novas"),
