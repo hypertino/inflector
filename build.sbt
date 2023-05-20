@@ -1,10 +1,8 @@
 import sbtcrossproject.CrossPlugin.autoImport.{crossProject, CrossType}
 
-lazy val scala213 = "2.13.1"
-lazy val scala212 = "2.12.10"
-lazy val scala211 = "2.11.12"
-lazy val scala210 = "2.10.7"
-lazy val supportedScalaVersions = List(scala213, scala212, scala211, scala210)
+lazy val scala213 = "2.13.10"
+lazy val scala212 = "2.12.17"
+lazy val supportedScalaVersions = List(scala213, scala212)
 
 ThisBuild / scalaVersion := scala213
 
@@ -16,9 +14,9 @@ lazy val library = crossProject(JSPlatform, JVMPlatform)
     crossScalaVersions := supportedScalaVersions,
     name := "inflector",
     version := "1.0-SNAPSHOT",
-    libraryDependencies += "org.scalatest" %%% "scalatest" % "3.1.0" % "test",
+    libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.15" % "test",
     publishArtifact := true,
-    publishArtifact in Test := false
+    Test / publishArtifact := false
 ).settings(publishSettings:_*)
 .jsSettings(
   // JS-specific settings here
@@ -72,7 +70,7 @@ lazy val publishSettings = Seq(
   credentials ++= (for {
     username <- Option(System.getenv().get("sonatype_username"))
     password <- Option(System.getenv().get("sonatype_password"))
-  } yield Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", username, password)).toSeq  
+  } yield Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", username, password)).toSeq
 )
 
 lazy val `inflector-root` = project
