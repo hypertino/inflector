@@ -13,7 +13,7 @@ lazy val library = crossProject(JSPlatform, JVMPlatform)
   .settings(
     crossScalaVersions := supportedScalaVersions,
     name := "inflector",
-    version := "1.0-SNAPSHOT",
+    version := "1.0.14",
     libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.15" % "test",
     publishArtifact := true,
     Test / publishArtifact := false
